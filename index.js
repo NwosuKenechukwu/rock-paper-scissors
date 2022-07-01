@@ -53,18 +53,18 @@ const playRound = function (playerSelection, computerSelection) {
 const whoWon = function () {
   let finalOutcome = "";
 
-  if (+plScore.textContent === 2) {
+  if (+plScore.textContent === 5) {
     finalOutcome = `You Won! 🏆`;
   }
-  if (+comScore.textContent === 2) {
+  if (+comScore.textContent === 5) {
     finalOutcome = `You Lost! 😢 Rematch? 😤`;
   }
+  document.querySelector(".options").classList.add("hide");
+  document.getElementById("select").style.display = "none";
   setTimeout(() => {
-    document.querySelector(".options").classList.add("hide");
-    document.getElementById("select").style.display = "none";
-    updateText.style.fontSize = "3vw";
+    updateText.style.fontSize = "2rem";
     updateText.textContent = finalOutcome;
-  }, 1000);
+  }, 2000);
 };
 
 const game = function () {
@@ -74,7 +74,7 @@ const game = function () {
   plScore.textContent = 0;
   comScore.textContent = 0;
   newGame.classList.remove("hide");
-  updateText.style.fontSize = "2vw";
+  updateText.style.fontSize = "0.7rem";
 };
 
 const updateScore = function (outcome) {
@@ -89,7 +89,10 @@ const updateScore = function (outcome) {
   if (gameOutcome.split(" ").includes("draw")) {
     console.log("draw");
   }
-  if (+plScore.textContent === 2 || +comScore.textContent === 2) {
+  if (+plScore.textContent === 5 || +comScore.textContent === 5) {
+    picks.forEach((pick) => {
+      pick.style["pointer-events"] = "none";
+    });
     whoWon();
   }
 };

@@ -76,29 +76,30 @@ select {
 /* AFTER RESET */
 
 body {
-  background-color: #d3ffe9;
+  background-color: #fbeb04;
+  overflow-y: hidden;
 }
 
 h1,
 p,
 button {
-  font-family: "Titan One", cursive;
+  font-family: "Press Start 2P", cursive;
 }
 
 h1,
 p {
-  font-size: 80px;
+  font-size: 2rem;
 }
 
 img {
-  width: 150px;
-  border: 10px solid black;
+  width: 200px;
   border-radius: 10px;
 }
 
 .tracker {
   display: flex;
   justify-content: center;
+  margin-top: 50px;
 }
 
 .player,
@@ -113,25 +114,24 @@ img {
 #comScore {
   background-color: black;
   border-radius: 10px;
-  padding: 0 30px;
+  padding: 0 20px;
   color: white;
 }
 
 .options {
   display: flex;
-  justify-content: center;
-  margin-top: 5vh;
+  justify-content: space-around;
+  margin-top: 6vh;
 }
 
-.options img {
-  margin: 0 5vw;
-  padding: 30px;
+.option:active {
+  transform: translateY(20px);
 }
 
 .comms {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 15vh;
 }
 
 #select {
@@ -144,8 +144,8 @@ img {
 .startGame {
   color: white;
   background-color: black;
-  padding: 20px;
-  border-radius: 20px;
+  padding: 20px 10px;
+  border-radius: 10px;
   z-index: 100;
 }
 
@@ -173,5 +173,5 @@ button {
 .ngDiv {
   display: flex;
   justify-content: center;
-  padding-top: 10vh;
+  padding-top: 5vh;
 }
