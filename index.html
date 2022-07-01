@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Titan+One&display=swap");
+    </style>
+    <title>Rock Paper Scissors!</title>
+  </head>
+  <body>
+    <div class="tracker">
+      <div class="player">
+        <h1>Player</h1>
+        <p id="playerScore">0</p>
+      </div>
+      <div class="computer">
+        <h1>Computer</h1>
+        <p id="comScore">0</p>
+      </div>
+    </div>
+    <p id="select">Select an option!</p>
+    <div class="options hide">
+      <a class="option" id="rock" href="#"
+        ><img src="/img/rock.png" alt="rock icon"
+      /></a>
+      <a class="option" id="paper" href="#"
+        ><img src="/img/paper.png" alt="paper icon"
+      /></a>
+      <a class="option" id="scissors" href="#"
+        ><img src="/img/scissors.png" alt="scissors icon"
+      /></a>
+    </div>
+    <div class="comms">
+      <p id="update">
+        Ready, Set, <button><span class="startGame"> Go!</span></button>
+      </p>
+    </div>
+    <div class="ngDiv">
+      <button class="newGame hide">New Game</button>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
