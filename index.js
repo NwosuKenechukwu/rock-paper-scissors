@@ -99,6 +99,9 @@ const updateScore = function (outcome) {
 
 const startGame = function () {
   game();
+  picks.forEach((pick) => {
+    pick.style["pointer-events"] = "auto";
+  });
 };
 
 const getPick = function () {};
